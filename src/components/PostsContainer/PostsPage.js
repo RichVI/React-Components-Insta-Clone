@@ -5,12 +5,11 @@ import "./Posts.css";
 
 // pass the data from App.js down as props then map through the data
 const PostsPage = (props) => {
+  console.log("here", props);
   return (
     <div className="posts-container-wrapper">
-      {props.postData.map(p => (
-        <Post post={p}/>
-        
-      ))}
+      {/* map through data here */}
+      {props.post.map((p) => (<Post key={p.username} Post data = {p}/>))}
     </div>
   );
 };
